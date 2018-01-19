@@ -15,7 +15,7 @@ function getMovies(searchText) {
       var movies = response;
       var output = '';
       $.each(movies, function(index, movie) {
-        if (movie === response.data) {
+        if (movie === response.data && movie.Director === 'Tim Burton') {
           console.log(index + ':' + movie);
           output += `
           <div class="modal-header">
@@ -29,7 +29,7 @@ function getMovies(searchText) {
           <p class="modal-p">${movie.Year}
         </div>
         `;
-        }
+        } 
       });
       $('.modal-content').html(output);
     }).catch(function(error) {
