@@ -236,7 +236,7 @@ $(document).ready(function() {
     console.log(anchorElement.dataset['title']);
     var movieTitle = anchorElement.dataset['title'];
   
-    axios.get('http://www.omdbapi.com/?t=' + movieTitle + '&apikey=3a181f1c')
+    axios.get('https://www.omdbapi.com/?t=' + movieTitle + '&apikey=3a181f1c')
       .then(function(response) {
         console.log(response);
         var movies = response;
